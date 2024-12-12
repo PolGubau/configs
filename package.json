@@ -20,7 +20,8 @@
     "format:pkgJson": "npx sort-package-json",
     "lint": "run-s lint:code publint",
     "lint:code": "biome lint --verbose",
-    "publint": "npx publint --strict"
+    "publint": "npx publint --strict",
+    "ci": "run-s check:biome lint"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.0",

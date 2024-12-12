@@ -2,9 +2,9 @@
   "license": "MIT",
   "name": "@polgubau/biome-config",
   "version": "0.0.1",
-  "private": false,
+
   "description": "Personal Biome config for React related projects.",
-  "keywords": ["biome", "biomejs", "config", "configuration","pol","polgubau"],
+  "keywords": ["biome", "biomejs", "config", "configuration", "pol", "polgubau"],
   "author": "Pol Gubau Amores",
   "contributors": ["Pol Gubau Amores <gubaupol@gmail.com>"],
   "type": "module",
@@ -34,5 +34,8 @@
   },
   "engines": {
     "node": ">=20.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

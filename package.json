@@ -1,0 +1,38 @@
+{
+  "license": "MIT",
+  "name": "@polgubau/biome-config",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Personal Biome config for React related projects.",
+  "keywords": ["biome", "biomejs", "config", "configuration","pol","polgubau"],
+  "author": "Pol Gubau Amores",
+  "contributors": ["Pol Gubau Amores <gubaupol@gmail.com>"],
+  "type": "module",
+  "exports": {
+    ".": "./biome.json"
+  },
+  "main": "biome.json",
+  "files": [],
+  "scripts": {
+    "check:biome": "biome rage --formatter --linter",
+    "format": "run-s format:code format:pkgJson",
+    "format:code": "biome check --write --verbose",
+    "format:pkgJson": "npx sort-package-json",
+    "lint": "run-s lint:code publint",
+    "lint:code": "biome lint --verbose",
+    "publint": "npx publint --strict"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.0",
+    "npm-package-json-lint": "7.1.0",
+    "npm-package-json-lint-config-package": "0.1.0",
+    "npm-run-all2": "6.1.2",
+    "publint": "0.2.7"
+  },
+  "peerDependencies": {
+    "@biomejs/biome": ">=1.9.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

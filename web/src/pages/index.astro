@@ -1,0 +1,11 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout>
+	<Welcome githubText="See Github">
+        <span slot="title">Custom <code class="code"> <pre> Biome </pre> </code> configuration for your .js or .ts project.</span>
+    </Welcome>
+</Layout>

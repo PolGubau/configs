@@ -15,16 +15,11 @@
   "files": [],
   "scripts": {
     "check-biome": "biome rage --formatter --linter",
-    "format": "pnpm format:code && pnpm format:pkgJson",
-    "format:code": "biome check --write --verbose",
-    "lint": "pnpm lint:code && publint",
-    "lint:code": "biome lint --verbose",
-    "publint": "npx publint --strict",
-    "ci": "pnpm i && pnpm check-biome pnpm lint"
+    "format": "biome check --write --verbose",
+    "lint": "biome lint --verbose",
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.0",
-    "publint": "0.2.7"
+    "@biomejs/biome": "1.9.0"
   },
   "peerDependencies": {
     "@biomejs/biome": ">=1.9.0"

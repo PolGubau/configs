@@ -14,19 +14,16 @@
   "main": "biome.json",
   "files": [],
   "scripts": {
-    "check:biome": "biome rage --formatter --linter",
-    "format": "run-s format:code format:pkgJson",
+    "check-biome": "biome rage --formatter --linter",
+    "format": "pnpm format:code && pnpm format:pkgJson",
     "format:code": "biome check --write --verbose",
-    "format:pkgJson": "npx sort-package-json",
     "lint": "run-s lint:code publint",
     "lint:code": "biome lint --verbose",
     "publint": "npx publint --strict",
-    "ci": "run-s check:biome lint"
+    "ci": "pnpm i && pnpm check-biome pnpm lint"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.0",
-    "npm-package-json-lint": "7.1.0",
-    "npm-package-json-lint-config-package": "0.1.0",
     "npm-run-all2": "6.1.2",
     "publint": "0.2.7"
   },

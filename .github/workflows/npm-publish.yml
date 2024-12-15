@@ -5,8 +5,10 @@ name: Publish on biome.json changes
 
 on:
   push:
-    paths:
-      - 'biome.json' # Solo se ejecuta si hay cambios en este archivo
+    branches:
+      - master
+
+     
 
 jobs:
   build:

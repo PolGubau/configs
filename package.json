@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "name": "@polgubau/biome-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
 
   "description": "Personal Biome config for React related projects.",
   "keywords": ["biome", "biomejs", "config", "configuration", "pol", "polgubau"],
@@ -17,14 +17,13 @@
     "check-biome": "biome rage --formatter --linter",
     "format": "pnpm format:code && pnpm format:pkgJson",
     "format:code": "biome check --write --verbose",
-    "lint": "run-s lint:code publint",
+    "lint": "pnpm lint:code && publint",
     "lint:code": "biome lint --verbose",
     "publint": "npx publint --strict",
     "ci": "pnpm i && pnpm check-biome pnpm lint"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.0",
-    "npm-run-all2": "6.1.2",
     "publint": "0.2.7"
   },
   "peerDependencies": {

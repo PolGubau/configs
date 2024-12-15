@@ -16,7 +16,7 @@
   "scripts": {
     "check-biome": "biome rage --formatter --linter",
     "format": "biome check --write --verbose",
-    "lint": "biome lint --verbose",
+    "lint": "biome lint --verbose"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.0"

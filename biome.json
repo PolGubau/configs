@@ -1,7 +1,8 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.0/schema.json",
   "files": {
-    "ignoreUnknown": true
+    "ignoreUnknown": true,
+    "ignore": ["dist/**", "build/**", "node_modules/**", "public/**", "package.json"]
   },
   "vcs": {
     "enabled": true,
@@ -10,12 +11,25 @@
   },
   "linter": {
     "enabled": true,
+
     "rules": {
       "all": true,
+      "a11y": {
+        "all": true
+      },
+      "correctness": {
+        "useImportExtensions": "off",
+        "noNodejsModules": "off",
+        "useExhaustiveDependencies": "off"
+      },
       "style": {
         "all": true,
+        "useImportType": {
+          "level": "off"
+        },
+        "useNamingConvention": "off",
         "useFilenamingConvention": {
-          "level": "error",
+          "level": "info",
           "options": {
             "strictCase": true,
             "requireAscii": true,
@@ -25,7 +39,8 @@
       },
       "suspicious": {
         "all": true,
-        "noReactSpecificProps": "off"
+        "noReactSpecificProps": "off",
+        "noConsole": "off"
       }
     }
   },
@@ -34,7 +49,7 @@
     "formatWithErrors": false,
     "indentStyle": "space",
     "indentWidth": 2,
-    "lineWidth": 100,
+    "lineWidth": 120,
     "attributePosition": "auto",
     "useEditorconfig": true
   },
@@ -42,37 +57,54 @@
     "enabled": true
   },
   "javascript": {
-    "jsxRuntime": "transparent"
+    "globals": [
+      "afterAll",
+      "afterEach",
+      "beforeAll",
+      "beforeEach",
+      "describe",
+      "expect",
+      "it",
+      "jest",
+      "test",
+      "React",
+      "JSX",
+      "vi"
+    ]
   },
   "json": {
-    "formatter": {
-      "enabled": true
-    },
-    "linter": {
-      "enabled": true
-    }
+    "formatter": { "enabled": true },
+    "linter": { "enabled": true }
   },
   "css": {
-    "formatter": {
-      "enabled": true
-    },
-    "linter": {
-      "enabled": true
-    }
+    "formatter": { "enabled": true },
+    "linter": { "enabled": true }
   },
   "overrides": [
     {
-      "include": ["src/main.tsx"],
+      "include": ["**/*.test.tsx", "**/*.spec.tsx", "**/*.test.ts", "**/*.spec.ts", "**/cypress/**/*", "**/*.cy.*"],
       "linter": {
         "rules": {
           "style": {
-            "noNonNullAssertion": "off"
+            "noNamespace": "off"
+          },
+          "correctness": {
+            "noUndeclaredVariables": "off"
           }
         }
       }
     },
+
     {
-      "include": ["src/App.tsx", "vite.config.ts", "eslint.config.js", "tailwind.config.ts"],
+      "include": [
+        "src/index.tsx",
+        "tailwind.config.ts",
+        "src/**/*.stories.tsx",
+        ".storybook/main.ts",
+        ".storybook/preview.tsx",
+        "./app/**/*",
+        "**/config/**/*"
+      ],
       "linter": {
         "rules": {
           "style": {

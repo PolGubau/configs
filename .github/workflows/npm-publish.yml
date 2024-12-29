@@ -24,23 +24,10 @@ jobs:
       # Validar código
       - run: npm run format
       - run: npm run lint
-      - run: npm run release
+      
+      - name: Semantic Release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # # Verificar si la versión ha cambiado
-      # - name: Check for version change
-      #   id: check-version
-      #   run: |
-      #     CURRENT_VERSION=$(npm view . version) # Obtener versión publicada
-      #     PACKAGE_VERSION=$(node -p "require('./package.json').version") # Obtener versión local
-      #     echo "current_version=$CURRENT_VERSION" >> $GITHUB_ENV
-      #     echo "package_version=$PACKAGE_VERSION" >> $GITHUB_ENV
-
-      # # Publicar si las versiones son diferentes
-      # - name: Publish to npm
-      #   if: env.current_version != env.package_version
-      #   run: npm publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.npm_token }}
+        run: npx semantic-release
+ 

@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/PolGubau/configs/compare/v1.0.0...v1.0.1) (2024-12-29)
+
+
+### Bug Fixes
+
+* **changelog:** update section headers and improve linter config in biome.json ([237a98f](https://github.com/PolGubau/configs/commit/237a98f7b9500d9fca982813b44a930fbc04ee28))
+
 # 1.0.0 (2024-12-29)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@polgubau/configs",
-  "version": "0.0.4",
+  "version": "1.0.0",
 
   "description": "Personal Biome config for React related projects.",
   "keywords": ["biome", "biomejs", "config", "configuration", "pol", "polgubau"],

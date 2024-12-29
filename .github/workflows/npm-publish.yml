@@ -25,6 +25,9 @@ jobs:
       - run: npm run format
       - run: npm run lint
       - run: npm run release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # # Verificar si la versión ha cambiado
       # - name: Check for version change

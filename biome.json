@@ -4,6 +4,7 @@
     "ignoreUnknown": true,
     "ignore": ["dist/**", "build/**", "node_modules/**", "public/**", "package.json"]
   },
+
   "vcs": {
     "enabled": true,
     "clientKind": "git",

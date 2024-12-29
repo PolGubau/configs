@@ -10,6 +10,7 @@
     "useIgnoreFile": true,
     "defaultBranch": "main"
   },
+
   "linter": {
     "enabled": true,
 

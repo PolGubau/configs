@@ -23,7 +23,8 @@ jobs:
 
       - name: Install dependencies
         run: npm i 
-
+      - name: Debug GitHub Token
+        run: echo "GITHUB_TOKEN=$GITHUB_TOKEN"
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN  }}

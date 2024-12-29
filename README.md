@@ -1,46 +1,47 @@
-# `@polgubau/biome-config`
+# `@polgubau/config`
 
 [![Checked with Biome](https://img.shields.io/badge/Checked_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)
 
-Personal Biome config for [React](https://react.dev/) projects.
+Personal configs for [React](https://react.dev/) projects.
 
-- [Source code](https://github.com/PolGubau/biome-config)
-- [npm package](https://www.npmjs.com/package/@polgubau/biome-config)
-- [Package Phobia](https://packagephobia.com/result?p=%40polgubau%2Fbiome-config)
+- [Source code](https://github.com/PolGubau/configs)
+- [npm package](https://www.npmjs.com/package/@polgubau/configs)
+- [Package Phobia](https://packagephobia.com/result?p=%40polgubau%2Fconfigs)
 
 ## Getting Started
 
 ### Installation
 
 ```bash
-npm install --save-dev @polgubau/biome-config
+npm install --save-dev @polgubau/configs
 ```
 
 or
 
 ```bash
-yarn add --dev @polgubau/biome-config
+yarn add --dev @polgubau/configs
 ```
 
 or
 
 ```bash
-pnpm add --save-dev @polgubau/biome-config
+pnpm add --save-dev @polgubau/configs
 ```
 
 or
 
 ```bash
-bun add --dev @polgubau/biome-config
+bun add --dev @polgubau/configs
 ```
 
-### Usage
-
+## Usage
+### Biome
 To use this configuration, create a `biome.json`/`biome.jsonc` file and add the following snippet:
 
 ```json
 {
-  "extends": ["@polgubau/biome-config"]
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "extends": ["@polgubau/configs/biome"]
 }
 ```
  

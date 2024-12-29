@@ -1,7 +1,6 @@
 {
-  "license": "MIT",
-  "name": "@polgubau/biome-config",
-  "version": "0.0.3",
+  "name": "@polgubau/configs",
+  "version": "0.0.4",
 
   "description": "Personal Biome config for React related projects.",
   "keywords": ["biome", "biomejs", "config", "configuration", "pol", "polgubau"],
@@ -9,7 +8,7 @@
   "contributors": ["Pol Gubau Amores <gubaupol@gmail.com>"],
   "type": "module",
   "exports": {
-    ".": "./biome.json"
+    "./biome": "./biome.json"
   },
   "main": "biome.json",
   "files": [],

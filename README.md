@@ -2,7 +2,7 @@
 
 [![Checked with Biome](https://img.shields.io/badge/Checked_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
-![GitHub License](https://img.shields.io/github/license/PolGubau/pol-ui)
+![GitHub License](https://img.shields.io/github/license/PolGubau/configs)
 
 
 Personal configs for [React](https://react.dev/) projects.

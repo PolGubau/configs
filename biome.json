@@ -7,15 +7,23 @@
   "vcs": {
     "enabled": true,
     "clientKind": "git",
-    "useIgnoreFile": true
+    "useIgnoreFile": true,
+    "defaultBranch": "main"
   },
   "linter": {
     "enabled": true,
 
     "rules": {
-      "all": true,
+      "recommended": true,
       "a11y": {
         "all": true
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "level": "warn",
+          "fix": "safe",
+          "options": {}
+        }
       },
       "correctness": {
         "useImportExtensions": "off",
@@ -81,6 +89,14 @@
     "linter": { "enabled": true }
   },
   "overrides": [
+    {
+      "include": ["./tsconfig.app.json", "./tsconfig.node.json"],
+      "json": {
+        "parser": {
+          "allowComments": true
+        }
+      }
+    },
     {
       "include": ["**/*.test.tsx", "**/*.spec.tsx", "**/*.test.ts", "**/*.spec.ts", "**/cypress/**/*", "**/*.cy.*"],
       "linter": {

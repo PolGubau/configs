@@ -1,28 +1,42 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
-
-name: Publish on biome.json changes
+name: Publish changes (if version changed)
 
 on:
   push:
     branches:
       - master
 
-     
-
 jobs:
-
   publish-npm:
     runs-on: ubuntu-latest
     steps:
+      # Configurar el repositorio
       - uses: actions/checkout@v4
+
+      # Configurar Node.js
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org/
+
+      # Instalar dependencias
       - run: npm i
+
+      # Validar código
       - run: npm run format
       - run: npm run lint
-      - run: npm publish
+
+      # Verificar si la versión ha cambiado
+      - name: Check for version change
+        id: check-version
+        run: |
+          CURRENT_VERSION=$(npm view . version) # Obtener versión publicada
+          PACKAGE_VERSION=$(node -p "require('./package.json').version") # Obtener versión local
+          echo "current_version=$CURRENT_VERSION" >> $GITHUB_ENV
+          echo "package_version=$PACKAGE_VERSION" >> $GITHUB_ENV
+
+      # Publicar si las versiones son diferentes
+      - name: Publish to npm
+        if: env.current_version != env.package_version
+        run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}

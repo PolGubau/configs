@@ -5,7 +5,7 @@
 ![GitHub License](https://img.shields.io/github/license/PolGubau/configs)
 ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/PolGubau/configs)
 ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/PolGubau/configs)
-![npm bundle size](https://img.shields.io/bundlephobia/min/%40polgubau%2Fconfigs)
+
 
 
 Personal configs for [React](https://react.dev/) projects.

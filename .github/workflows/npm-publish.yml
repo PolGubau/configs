@@ -1,33 +1,31 @@
-name: Publish changes (if version changed)
+name: Release
 
 on:
   push:
     branches:
-      - master
+      - master # For stable releases
+      - next # For pre-releases
 
 jobs:
-  publish-npm:
+  release:
     runs-on: ubuntu-latest
     steps:
-      # Configurar el repositorio
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
 
-      # Configurar Node.js
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 20
-          registry-url: https://registry.npmjs.org/
 
-      # Instalar dependencias
-      - run: npm i
+      - name: Install dependencies
+        run: npm ci 
 
-      # Validar código
-      - run: npm run format
-      - run: npm run lint
-      
       - name: Semantic Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.npm_token }}
+          GITHUB_TOKEN: ${{ secrets.GH_PA_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
- 

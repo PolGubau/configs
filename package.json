@@ -10,14 +10,17 @@
     "pol",
     "polgubau"
   ],
+  "homepage": "https://configs.polgubau.com",
   "author": "Pol Gubau Amores",
   "contributors": [
     "Pol Gubau Amores <gubaupol@gmail.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/PolGubau/configs"
+    "url": "git+https://github.com/PolGubau/configs.git"
   },
+  "license": "MIT",
+  "bugs": "https://github.com/PolGubau/configs/issues",
   "type": "module",
   "exports": {
     "./biome": "./biome.json"
@@ -46,6 +49,8 @@
     "node": ">=20.0.0"
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public",
+    "publishPath": "./"
   }
 }

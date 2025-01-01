@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/PolGubau/configs/compare/v1.0.1...v1.1.0) (2025-01-01)
+
+
+### Features
+
+* **biome:** remove unnecessary blank line in linter configuration ([7873cfb](https://github.com/PolGubau/configs/commit/7873cfb67ce61b4e3aea7283d91f3ee672fe9f74))
+
 ## [1.0.1](https://github.com/PolGubau/configs/compare/v1.0.0...v1.0.1) (2024-12-29)
 
 

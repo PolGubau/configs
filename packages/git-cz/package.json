@@ -23,7 +23,7 @@
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/PolGubau/configs.git",
-		"directory": "packages/git-cz-config"
+		"directory": "packages/git-cz"
 	},
 	"publishConfig": {
 		"registry": "https://registry.npmjs.org/",

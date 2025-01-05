@@ -14,7 +14,8 @@
   "bugs": "https://github.com/PolGubau/configs/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PolGubau/configs.git"
+    "url": "git+https://github.com/PolGubau/configs.git",
+    "directory": "packages/biome"
   },
   "license": "MIT",
   "author": "Pol Gubau Amores",

@@ -15,7 +15,11 @@ module.exports.createMonolithicReleaseConfig = ({
     throw new Error("pkgRoot parameter is required and must be a string");
   }
 
-  if (!Array.isArray(branches) || !branches.length || !branches.every((b) => b.name && typeof b.name === "string")) {
+  if (
+    !Array.isArray(branches) ||
+    branches.length === 0 ||
+    !branches.every((b) => b.name && typeof b.name === "string")
+  ) {
     throw new Error("branches parameter must be a non-empty array of objects with name property");
   }
 

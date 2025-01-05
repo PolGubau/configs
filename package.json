@@ -1,6 +1,6 @@
 {
   "name": "@polgubau/configs",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Personal configs for Typescript related projects.",
   "keywords": [
     "biome",
@@ -38,7 +38,6 @@
       "path": "git-cz"
     }
   },
-  "dependencies": {},
   "devDependencies": {
     "@biomejs/biome": "1.9.0",
     "@semantic-release/changelog": "6.0.3",
@@ -48,7 +47,8 @@
     "@semantic-release/npm": "12.0.1",
     "@semantic-release/release-notes-generator": "14.0.2",
     "conventional-changelog-conventionalcommits": "8.0.0",
-    "semantic-release": "24.2.0"
+    "semantic-release": "24.2.0",
+    "semantic-release-monorepo": "8.0.2"
   },
   "peerDependencies": {
     "@biomejs/biome": ">=1.9.0"

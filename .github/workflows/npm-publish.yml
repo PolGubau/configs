@@ -19,10 +19,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 22
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: npm i 
+        run: npm i
 
       - name: Semantic Release
         env:

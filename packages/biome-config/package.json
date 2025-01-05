@@ -1,7 +1,7 @@
 {
-  "name": "@polgubau/configs",
-  "version": "1.1.1",
-  "description": "Personal configs for Typescript related projects.",
+  "name": "@polgubau/biome-config",
+  "version": "1.1.0",
+  "description": "Personal Biome config for React related projects.",
   "keywords": [
     "biome",
     "biomejs",
@@ -52,9 +52,5 @@
     "access": "public",
     "publishPath": "./",
     "registry": "https://registry.npmjs.org/"
-  },
-  "dependencies": {
-    "@semantic-release/github": "11.0.1",
-    "@semantic-release/npm": "12.0.1"
   }
 }

@@ -1,0 +1,21 @@
+{
+	"name": "@polgubau/semantic-release-config",
+	"version": "1.0.0",
+	"type": "commonjs",
+	"keywords": ["semantic-release", "monorepo", "monolithic"],
+	"private": false,
+	"dependencies": {},
+	"main": "./index.cjs",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PolGubau/configs.git",
+		"directory": "npm-packages/semantic-release-config"
+	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/",
+		"tag": "latest",
+		"access": "public"
+	},
+	"readme": "README.md",
+	"license": "MIT"
+}

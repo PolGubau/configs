@@ -1,6 +1,6 @@
 const { createMonorepoReleaseConfig } = require("@polgubau/semantic-release-config");
 
-const name = "git-cz-config";
+const name = "biome";
 const srcRoot = `packages/${name}`;
 const pkgRoot = `packages/${name}`;
 

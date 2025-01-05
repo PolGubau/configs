@@ -9,6 +9,10 @@ env:
   CI: true
   NODE_VERSION: 22
   PNPM_VERSION: 9
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
   
 permissions:
   contents: write # to be able to publish a GitHub release

@@ -2,19 +2,23 @@
 	"name": "@polgubau/git-cz-config",
 	"version": "1.0.0",
 	"type": "commonjs",
-	"keywords": ["commitizen", "cz-customizable", "cz-config", "cz", "config"],
+	"keywords": [
+		"commitizen",
+		"cz-customizable",
+		"cz-config",
+		"cz",
+		"config"
+	],
 	"private": false,
 	"dependencies": {
-		 "@polgubau/semantic-release-config": "^1.3.3"
+		"@polgubau/semantic-release-config": "1.0.0"
 	},
 	"bugs": "https://github.com/PolGubau/configs/issues",
-
 	"license": "MIT",
 	"author": "Pol Gubau Amores <gubaupol@gmail.com> (https://polgubau.com)",
 	"contributors": [
 		"Pol Gubau Amores <gubaupol@gmail.com> (https://polgubau.com)"
 	],
-
 	"main": "./index.cjs",
 	"repository": {
 		"type": "git",
